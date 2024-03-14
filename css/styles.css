@@ -141,11 +141,20 @@ img {
   /* display: flex;
   flex-direction: column;
   justify-content: center; */
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .hero-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.hero-cont {
 }
 .hero-title {
   font-weight: 700;
@@ -258,6 +267,24 @@ img {
   letter-spacing: 0.02em;
   text-align: center;
   color: #434455;
+  margin-bottom: 8px;
+}
+.card-contact-box {
+  display: flex;
+  gap: 24px;
+}
+/* =============SVG=============== */
+.card-contact-link {
+  width: 40px;
+  height: 40px;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-contact-link:hover {
+  background-color: #31d0aa;
 }
 /* Section 4 */
 .sf-container {
