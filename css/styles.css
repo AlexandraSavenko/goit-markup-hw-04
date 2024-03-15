@@ -95,22 +95,35 @@ img {
   display: flex;
   gap: 40px;
 }
+
 .header-menu-link {
-  padding: 24px 0;
-}
-.nav-content {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  padding: 24px 0;
+  /* display: block; */
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.nav-content:hover {
+.header-menu-link:hover,
+.header-menu-link:focus {
   color: #404bbf;
 }
-.nav-content:focus {
-  text-decoration: underline;
+
+.current {
+  position: relative;
   color: #404bbf;
+}
+.current::after {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  content: " ";
+  height: 4px;
+  border-radius: 2px;
+  background-color: #404bbf;
+  width: 100%;
 }
 
 /* Contacts */
@@ -127,6 +140,7 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  transition: color cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-contacts-link:hover {
   color: #404bbf;
@@ -209,6 +223,19 @@ img {
 .section-two-item {
   width: calc((100% - 3 * 24px) / 4);
 }
+/* ==============SVG============== */
+.section-two-icon {
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  width: 264px;
+  height: 112px;
+  background-color: #f4f4fd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
 .section-two-subtitle {
   font-weight: 500;
   font-size: 20px;
@@ -254,6 +281,8 @@ img {
   /* gap: 32px; */
   border-radius: 0 0 4px 4px;
   width: calc((100% - 3 * 24px) / 4);
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 .section-three-subtitle {
   margin-bottom: 8px;
@@ -311,7 +340,10 @@ img {
 .section-four-item {
   width: calc((100% - 2 * 24px) / 3);
 }
-
+.section-four-item:hover {
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
 .section-four-item:hover .app-cover-text {
   transform: translateY(0);
 }
@@ -361,7 +393,12 @@ img {
   background-color: #2e2f42;
   padding: 100px 0;
 }
-
+.footer-content {
+  display: flex;
+}
+.footer-content-logobox {
+  margin-right: 120px;
+}
 .footer-logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -381,4 +418,15 @@ img {
   color: #f4f4fd;
   letter-spacing: 0.02em;
   max-width: 264px;
+}
+.card-contact-fbox-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+.card-contact-fbox {
+  display: flex;
+  gap: 16px;
 }
