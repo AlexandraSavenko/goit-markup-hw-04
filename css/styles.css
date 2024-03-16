@@ -213,7 +213,7 @@ img {
 .hero-button:hover,
 .hero-button:focus {
   background-color: #404bbf;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 /* Section 2 */
